@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="invoice">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="control.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+	<style type="text/css" media="print">
+   	.no-print { display: none; }
+   	.invoice{width: 100%;}
+   	.footer{margin-top: 100%}
+	</style>
+</head>
+<body ng-controller="controlador">
+	<div class="personalizator no-print">
+		
+		<div class="wrapper">
+			<img class="logo" src="img/logo.png" alt="">
+			<div class="cf"></div>
+			<label> Número de factura</label>
+			<input type="text" placeholder="ej. 2-3" ng-model="invoicenumber">
+			<br>
+			<label> Concepto</label>
+			<textarea placeholder="Servicio o parte de servicio" class="pers-concept" ng-model="concept"></textarea>
+			<br>
+			<label>Cantidad</label>
+			<input  placeholder="ej. 5000" type="text" ng-model="amount">
+			<br>
+			<label>IVA</label>
+			<input  placeholder="porcentaje" type="text" ng-model="iva">
+			<br>
+			<label>Días para pagar</label>
+			<input  placeholder="ej. 10" type="text" ng-model="deadline">
+			<br>
+			<label>Tu nombre</label>
+			<input  placeholder="Razón Social" type="text" ng-model="name">
+			<br>
+			<label>Cliente</label>
+			<input  placeholder="Razón Social" type="text" ng-model="client">
+			<br>
+
+			<input type="button" class="save" value="Guardar" onClick="window.print()">
+		</div>
+		
+
+	</div>
+
+	<div id="mydiv"class="invoice">
+		<div class="wrapper">
+			<div class="bigtitle">factura</div>
+			<div class="cf"></div>
+			<div class="numberofinvoice">No˚ {{invoicenumber}}</div>
+			<div class="date">{{date}}</div>
+
+			
+			<div class="cf"></div>
+
+			<div class="numbers">
+				<div class="table desc">Concepto</div>
+				<div class="tabletwo amount">Monto</div>	
+				<hr>
+				<div class="concept table">{{concept}}</div>
+				<div class="price tabletwo">${{amount}} mxn</div>
+				<div class="concept table">IVA</div>
+				<div class="price tabletwo">{{iva}}%</div>
+				<div class="concept table">Total</div>
+				<div class="price tabletwo">${{total}}</div>
+			</div>
+		
+			<div class="footer">
+				
+				<div class="footsection">Expide: {{name}}</div>
+				<div class="footsection">Páguese antes de: {{beforedate}}</div>
+				<div class="footsection">Recibe: {{client}}</div>
+				
+
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript">
+		$('textarea').autoResize();
+	</script>
+	
+
+</body>
+</html>

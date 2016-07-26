@@ -1,0 +1,533 @@
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+@font-face {
+  font-family: "Gotham";
+  src: url('/fonts/../fonts/gotham/gotham.ttf?1436518602') format('truetype');
+}
+@font-face {
+  font-family: "Gotham-medium";
+  src: url('/fonts/../fonts/gotham/gotham-medium.ttf?1436518660') format('truetype');
+}
+@font-face {
+  font-family: "Gotham-black";
+  src: url('/fonts/../fonts/gotham/gotham-black.ttf?1436518632') format('truetype');
+}
+/* line 7, ../sass/styles.sass */
+html, body {
+  font-size: 14px;
+  height: 100%;
+}
+
+/* line 10, ../sass/styles.sass */
+img {
+  max-width: 100%;
+}
+
+/* line 13, ../sass/styles.sass */
+.personalizator {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+  font-family: "Gotham-medium";
+  background: #31ADFF;
+  color: white;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.personalizator:before, .personalizator:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.personalizator:after {
+  clear: both;
+}
+/* line 19, ../sass/styles.sass */
+.personalizator .wrapper {
+  height: 95%;
+  padding: 10px;
+  overflow: auto;
+}
+/* line 23, ../sass/styles.sass */
+.personalizator ::-webkit-scrollbar {
+  display: none;
+}
+/* line 28, ../sass/styles.sass */
+.personalizator .logo {
+  margin-bottom: 50px;
+}
+/* line 30, ../sass/styles.sass */
+.personalizator label {
+  font-size: 30px;
+  margin-top: 50px;
+}
+/* line 33, ../sass/styles.sass */
+.personalizator textarea, .personalizator input {
+  border: none;
+  border-bottom: 3px solid white;
+  background: #31ADFF;
+  color: white;
+  width: 90%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  min-height: 20px;
+  max-height: 500px;
+  font-size: 20px;
+}
+/* line 47, ../sass/styles.sass */
+.personalizator ::-webkit-input-placeholder {
+  color: rgba(250, 250, 250, 0.5);
+}
+/* line 49, ../sass/styles.sass */
+.personalizator ::-webkit-scrollbar {
+  display: none;
+}
+/* line 52, ../sass/styles.sass */
+.personalizator textarea:focus, .personalizator input:focus {
+  outline: none;
+}
+/* line 54, ../sass/styles.sass */
+.personalizator .save {
+  border: 3px solid white;
+  cursor: pointer;
+}
+/* line 57, ../sass/styles.sass */
+.personalizator .save:hover {
+  background: rgba(250, 250, 250, 0.2);
+}
+
+/* line 64, ../sass/styles.sass */
+.invoice {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.invoice:before, .invoice:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.invoice:after {
+  clear: both;
+}
+/* line 66, ../sass/styles.sass */
+.invoice .wrapper {
+  padding: 20px;
+}
+
+/* line 69, ../sass/styles.sass */
+.bigtitle {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  font-family: "Gotham-medium";
+  font-size: 100px;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.bigtitle:before, .bigtitle:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.bigtitle:after {
+  clear: both;
+}
+/* line 58, ../bower_components/jeet/scss/jeet/_grid.scss */
+.bigtitle:last-child {
+  margin-right: 0%;
+}
+
+/* line 73, ../sass/styles.sass */
+.cf {
+  *zoom: 1;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.cf:before, .cf:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 75, ../sass/styles.sass */
+.numberofinvoice, .date {
+  display: inline;
+  font-family: "Gotham-black";
+  padding-left: 10px;
+}
+
+/* line 80, ../sass/styles.sass */
+.numberofinvoice {
+  color: #DA6969;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numberofinvoice:before, .numberofinvoice:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numberofinvoice:after {
+  clear: both;
+}
+/* line 58, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numberofinvoice:last-child {
+  margin-right: 0%;
+}
+
+/* line 84, ../sass/styles.sass */
+.date {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  color: #615E5E;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.date:before, .date:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.date:after {
+  clear: both;
+}
+/* line 58, ../bower_components/jeet/scss/jeet/_grid.scss */
+.date:last-child {
+  margin-right: 0%;
+}
+
+/* line 88, ../sass/styles.sass */
+.numbers {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 51.5%;
+  margin-right: 3%;
+  margin-top: 20%;
+  font-family: "Gotham-medium";
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numbers:before, .numbers:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numbers:after {
+  clear: both;
+}
+/* line 58, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numbers:last-child {
+  margin-right: 0%;
+}
+/* line 92, ../sass/styles.sass */
+.numbers .desc, .numbers .amount {
+  color: #959595;
+}
+/* line 94, ../sass/styles.sass */
+.numbers .table {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numbers .table:before, .numbers .table:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numbers .table:after {
+  clear: both;
+}
+/* line 96, ../sass/styles.sass */
+.numbers .tabletwo {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numbers .tabletwo:before, .numbers .tabletwo:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.numbers .tabletwo:after {
+  clear: both;
+}
+/* line 98, ../sass/styles.sass */
+.numbers .amount, .numbers .price {
+  text-align: right;
+}
+/* line 100, ../sass/styles.sass */
+.numbers .concept, .numbers .price {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+/* line 104, ../sass/styles.sass */
+.footer {
+  border-top: 3px solid black;
+  margin-top: 50%;
+  font-family: "Gotham-medium";
+}
+/* line 108, ../sass/styles.sass */
+.footer .footsection {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  margin-top: 20px;
+}
+/* line 344, ../bower_components/jeet/scss/jeet/_grid.scss */
+.footer .footsection:before, .footer .footsection:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../bower_components/jeet/scss/jeet/_grid.scss */
+.footer .footsection:after {
+  clear: both;
+}
+/* line 50, ../bower_components/jeet/scss/jeet/_grid.scss */
+.footer .footsection:nth-child(2n) {
+  margin-right: 0%;
+  float: right;
+}
+/* line 54, ../bower_components/jeet/scss/jeet/_grid.scss */
+.footer .footsection:nth-child(2n + 1) {
+  clear: both;
+}
