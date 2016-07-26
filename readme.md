@@ -7,11 +7,11 @@ A simple invoice generator for the regular freelancer. It can export the invoice
 You can control:
 
 
-![screenshoot](screen-1.png)
+![screenshoot](screen-2.png)
 Captura de pantalla / Screenshoot
 
 
-![screenshoot](screen-2.png)
+![screenshoot](screen-1.png)
 Vista de guaradar/ imprimir (Save/print view)
 
 
